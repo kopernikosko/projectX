@@ -1,0 +1,40 @@
+
+<div id="log-container">
+    <div id="libtn">
+      <button routerLink="/login">Login</button>
+    </div>
+  
+    <div id="libtn">
+      <button (click)="change_status()">LogOut</button>
+    </div>
+  
+    <div id="libtn" (onRefresh)="togle()">
+      <p *ngIf="status">You are LogedIn</p>
+      <p *ngIf="!status">You are LogedOut</p>
+    </div>
+  </div>
+  
+  <div class="dashboard">
+    <div id="libtn">
+      <nav>
+        <a routerLink="/whowweare" >Who we are</a>
+      </nav>
+      </div>
+      <div id="libtn">
+        <nav>
+          <a routerLink="/background" >Knowledge Background</a>
+        </nav>
+        </div>
+        <div id="libtn">
+          <nav>
+            <a routerLink="/inquiry" >Make an inquiry</a>
+          </nav>
+          </div>
+          <div id="libtn">
+            <nav>
+              <a routerLink="/myinquiries" >View your inquiries</a>
+            </nav>
+            </div>
+                
+  </div>
+  <p>{{title}}</p>

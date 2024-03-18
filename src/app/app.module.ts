@@ -15,6 +15,7 @@ import { MyinquiriescompComponent } from './myinquiriescomp/myinquiriescomp.comp
 import { MyinquiriesentrycompComponent } from './myinquiriesentrycomp/myinquiriesentrycomp.component';
 import { RegistercomponentComponent } from './registercomponent/registercomponent.component';
 import { ErrorcompComponent } from './errorcomp/errorcomp.component';
+import { NavbarcompComponent } from './navbarcomp/navbarcomp.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ErrorcompComponent } from './errorcomp/errorcomp.component';
     MyinquiriescompComponent,
     MyinquiriesentrycompComponent,
     RegistercomponentComponent,
-    ErrorcompComponent
+    ErrorcompComponent,
+    NavbarcompComponent
   ],
   imports: [
     BrowserModule,

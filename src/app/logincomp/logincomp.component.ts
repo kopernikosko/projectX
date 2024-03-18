@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -8,12 +8,18 @@ import { Component } from '@angular/core';
 })
 export class LogincompComponent {
 
+  @Output() onRefresh: EventEmitter<null> = new EventEmitter<null>();
+
   username:string = "uname"; 
   password:string = "pass"; 
 
   login() {
     this.username = "new"
     this.password = "new2"
+  }
+
+  send() {
+    this.onRefresh.emit();
   }
 
 }

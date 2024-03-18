@@ -6,12 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
- status1 = "random";
 //na dw to status mhpws ginei me {status}
 //dhmiourgw methodo pou na alazei to status apo onclick
-
-togle() {
-  this.status1 = "deterministic";
-}
 
 }

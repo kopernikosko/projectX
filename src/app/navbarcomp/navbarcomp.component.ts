@@ -7,15 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class NavbarcompComponent {
 
-  @Input() title: string = '';
-
   status = true;
 
   change_status() {
     this.status = false;
   }
   
-  togle() {
-    this.status = false;
-  }
 }

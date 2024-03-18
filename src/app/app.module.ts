@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { BackgroundentrycompComponent } from './backgroundentrycomp/backgrounden
 import { InquirycompComponent } from './inquirycomp/inquirycomp.component';
 import { MyinquiriescompComponent } from './myinquiriescomp/myinquiriescomp.component';
 import { MyinquiriesentrycompComponent } from './myinquiriesentrycomp/myinquiriesentrycomp.component';
+import { RegistercomponentComponent } from './registercomponent/registercomponent.component';
+import { ErrorcompComponent } from './errorcomp/errorcomp.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { MyinquiriesentrycompComponent } from './myinquiriesentrycomp/myinquirie
     BackgroundentrycompComponent,
     InquirycompComponent,
     MyinquiriescompComponent,
-    MyinquiriesentrycompComponent
+    MyinquiriesentrycompComponent,
+    RegistercomponentComponent,
+    ErrorcompComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

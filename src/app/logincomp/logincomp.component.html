@@ -1,1 +1,10 @@
-<p>logincomp works!</p>
+<h1>Please enter username and password if you are registered else register first</h1>
+<p> {{username}}</p>
+<p>{{password}}</p>
+<p>Enter username</p>
+<input type="text" [(ngModel)]="username" />
+<p>Enter password</p>
+<input type="text" [(ngModel)]="password" />
+<p>Submit</p>
+<button (click)="login()">LogIn</button>
+<button routerLink="/logout">Register</button>

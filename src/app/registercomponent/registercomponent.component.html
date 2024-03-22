@@ -10,6 +10,16 @@
         <p>
         LastName: <input formControlName="last"  placeholder="Enter your last name">
         </p>
+        <p>
+        Email: <input formControlName="email"  placeholder="Enter your email">  
+        </p>
+        <p>
+        Phone: <input formControlName="phone"  placeholder="Enter your phone">     
+        </p>
+        <p>
+        Password: <input formControlName="password"  placeholder="Enter your password">     
+        </p>
+        <button type="submit" *ngIf="requiredForm.valid">Submit</button>
       </form>
     
 </div>

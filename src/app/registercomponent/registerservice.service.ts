@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 export class RegisterserviceService {
 
   constructor() { }
-<<<<<<< HEAD
 
   exists: string = "";
   data: string = "";
@@ -32,6 +31,4 @@ export class RegisterserviceService {
     return localStorage.getItem(uname) || "null";
   }
 
-=======
->>>>>>> 5fb4d0560262cc1dcb34e6d6282f3cd28ceafbc6
 }

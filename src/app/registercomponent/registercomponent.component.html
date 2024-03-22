@@ -1,1 +1,16 @@
 <p>registercomponent works!</p>
+
+<div id="form">
+     
+     <form [formGroup]="requiredForm" (ngSubmit)="save()">
+        <p>
+        FirstName: <input formControlName="first"  placeholder="Enter your first name">
+        </p>
+        <div *ngIf="requiredForm.controls['first'].errors?.['required']">Error please</div>
+        <p>
+        LastName: <input formControlName="last"  placeholder="Enter your last name">
+        </p>
+      </form>
+    
+</div>
+<p>{{status}}</p>

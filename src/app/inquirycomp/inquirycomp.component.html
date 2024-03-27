@@ -1,1 +1,15 @@
 <p>inquirycomp works!</p>
+<p>{{uname}}</p>
+<p>{{inquiries}}</p>
+<p>{{val}}</p>
+
+<table id="student">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+	</tr>
+	<tr *ngFor="let entry of inquiries">
+		<td>{{entry.name}}</td>
+		<td>{{entry.age}}</td>
+	</tr>
+</table>

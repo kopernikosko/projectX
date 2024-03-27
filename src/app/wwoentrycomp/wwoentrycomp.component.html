@@ -1,1 +1,9 @@
 <p>wwoentrycomp works!</p>
+<div class="entry-container" *ngFor="let entry of data2show">
+    <div class="entry">
+        <h1>Title:{{entry.title}}</h1>
+        <h3>Year: {{entry.year}}</h3>
+        <h3>Institution: {{entry.institution}}</h3>
+        <p></p>
+    </div>
+</div>

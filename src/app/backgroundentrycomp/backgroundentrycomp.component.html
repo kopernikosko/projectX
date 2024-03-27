@@ -1,1 +1,10 @@
 <p>backgroundentrycomp works!</p>
+
+<div class="entry-container">
+	<div class="entry" *ngFor="let entry of dataentry">
+		<h1>{{entry.sector}}</h1>
+		<div class="section" *ngFor="let val of entry.values">
+			<h3>{{val}}</h3>
+		</div>
+	</div>
+</div>

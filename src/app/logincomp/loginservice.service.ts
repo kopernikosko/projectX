@@ -13,8 +13,13 @@ export class LoginserviceService {
 
   login(userName: string, password: string): Observable<boolean> {
 
-    this.isUserLoggedIn = userName == 'admin' && password == 'admin';
-    localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false");
+    if(userName == "admin" && password == "admin") {
+      this.isUserLoggedIn = true;
+    }
+
+    if(this.isUserLoggedIn) {
+    localStorage.setItem('isUserLoggedIn', userName);
+    }
 
     return of(this.isUserLoggedIn).pipe(
       delay(1000),
@@ -24,4 +29,10 @@ export class LoginserviceService {
    );
 
   }
+
+  checkLogIn(): any{
+
+    return localStorage.getItem('isUserLoggedIn');
+  }
+
 }

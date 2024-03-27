@@ -1,1 +1,15 @@
 <p>myinquiriesentrycomp works!</p>
+<p>{{data2show}}</p>
+<p>{{ty}}</p>
+
+<p>Read Local JSON file student data using typescript HttpClient</p>
+<table id="student">
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+	</tr>
+	<tr *ngFor="let entry of data2show">
+		<td>{{entry.name}}</td>
+		<td>{{entry.email}}</td>
+	</tr>
+</table>

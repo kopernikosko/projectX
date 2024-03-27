@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wwoentrycomp',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './wwoentrycomp.component.css'
 })
 export class WwoentrycompComponent {
+
+  @Input() data2show: any;
 
 }

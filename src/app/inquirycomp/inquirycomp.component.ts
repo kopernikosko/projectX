@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginserviceService } from '../logincomp/loginservice.service';
 import { Router } from '@angular/router';
 import { InquiryserviceService } from './inquiryservice.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-inquirycomp',
@@ -10,10 +11,14 @@ import { InquiryserviceService } from './inquiryservice.service';
 })
 export class InquirycompComponent implements OnInit{
 
+  requiredForm: FormGroup;
 
-  constructor(private logService: LoginserviceService,private inqservice: InquiryserviceService, private router: Router){}
+  constructor(private fb: FormBuilder, private logService: LoginserviceService,private inqservice: InquiryserviceService, private router: Router){
+
+    this.requiredForm = this.fb.group({first: ['', Validators.required ], domain: ['', Validators.required], details: ['', Validators.required]})
+  }
   
-  uname: string = this.logService.checkLogIn();
+  uname: any;
   inquiries: any;
   val:any;
 
@@ -29,6 +34,10 @@ export class InquirycompComponent implements OnInit{
       this.val = this.inquiries[0].name;
 
     }
+  }
+
+  save(){
+    this.val = this.inqservice.save(this.requiredForm.value);
   }
   
 

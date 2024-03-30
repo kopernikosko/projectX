@@ -16,6 +16,7 @@ const routes: Routes = [{ path: 'login', component: LogincompComponent },
 {path: 'inquiry', component: InquirycompComponent},
 {path: 'whowweare', component: WwocompComponent},
 {path: 'myinquiries/:param', component: MyinquiriescompComponent},
+{path: 'myinquiries', component: ErrorcompComponent},
 {path: '**', component: ErrorcompComponent}];
 
 @NgModule({

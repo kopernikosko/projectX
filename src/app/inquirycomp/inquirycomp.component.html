@@ -1,15 +1,25 @@
 <p>inquirycomp works!</p>
-<p>{{uname}}</p>
-<p>{{inquiries}}</p>
-<p>{{val}}</p>
+<p>{{requiredForm.value.domain}}</p>
 
-<table id="student">
-	<tr>
-		<th>Name</th>
-		<th>Email</th>
-	</tr>
-	<tr *ngFor="let entry of inquiries">
-		<td>{{entry.name}}</td>
-		<td>{{entry.age}}</td>
-	</tr>
-</table>
+<div class="inquiry-container">
+
+<form [formGroup]="requiredForm" (ngSubmit)="save()">
+<p>Please select your age:</p>
+  <label for="desc"> Short Description</label><br><br>
+  <input type="text" size=100 formControlName="description"><br>
+  <h3>Domain</h3><br>
+  <input type="radio" formControlName="domain" id="ML" value="ML">
+  <label for="ML">Machine Learning</label><br>
+  <input type="radio" formControlName="domain" id="WebAppPenTest" value="WebAppPenTest">
+  <label for="WebAppPenTest">WebAppPenTest</label><br>  
+  <input type="radio" formControlName="domain" id="MobileAppPenTest" value="MobAppPenTest">
+  <label for="MobAppPenTest">MobileAppPenTest</label><br>
+  <input type="radio" formControlName="domain" id="WebApp" value="WebApp">
+  <label for="WebApp">WebApp</label><br>
+  <input type="radio" formControlNme="domain" id="MobileApp" value="MobileApp">
+  <label for="MobileApp">MobileApp</label><br><br>
+  <h3>Please enter the details</h3><br>
+  <label for="Details"></label>
+  <textarea rows="20" cols="100" id="Details" formControlName="details"></textarea><br><br>
+  <input type="submit" value="Submit">
+</form>

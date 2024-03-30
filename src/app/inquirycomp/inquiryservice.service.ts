@@ -13,4 +13,8 @@ export class InquiryserviceService {
   get(name:string): Object {
     return this.data;
   }
+
+  save(param:any){
+
+  }
 }
